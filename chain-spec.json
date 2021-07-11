@@ -1,0 +1,151 @@
+{
+  "name": "DevChain",
+  "engine": { "instantSeal": null },
+  "params": {
+    "gasLimitBoundDivisor": "0x0400",
+    "accountStartNonce": "0x0",
+    "maximumExtraDataSize": "0x20",
+    "minGasLimit": "0x1",
+    "networkID": "0x104D",
+    "registrar": "0x0000000000000000000000000000000000001337",
+    "eip150Transition": "0x0",
+    "eip160Transition": "0x0",
+    "eip161abcTransition": "0x0",
+    "eip161dTransition": "0x0",
+    "eip155Transition": "0x0",
+    "maxCodeSize": "0x6000",
+    "maxCodeSizeTransition": "0x0",
+    "eip140Transition": "0x0",
+    "eip211Transition": "0x0",
+    "eip214Transition": "0x0",
+    "eip658Transition": "0x0",
+    "eip145Transition": "0x0",
+    "eip1014Transition": "0x0",
+    "eip1052Transition": "0x0",
+    "eip1283Transition": "0x0",
+    "eip1283DisableTransition": "0x0",
+    "eip1283ReenableTransition": "0x0",
+    "eip1344Transition": "0x0",
+    "eip1706Transition": "0x0",
+    "eip1884Transition": "0x0",
+    "eip2028Transition": "0x0"
+  },
+  "genesis": {
+    "seal": { "generic": "0x0" },
+    "difficulty": "0x20000",
+    "author": "0x0000000000000000000000000000000000000000",
+    "timestamp": "0x00",
+    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "extraData": "0x",
+    "gasLimit": "0x7A1200"
+  },
+  "accounts": {
+    "0000000000000000000000000000000000000001": {
+      "balance": "1",
+      "builtin": {
+        "name": "ecrecover",
+        "pricing": { "linear": { "base": 3000, "word": 0 } }
+      }
+    },
+    "0000000000000000000000000000000000000002": {
+      "balance": "1",
+      "builtin": {
+        "name": "sha256",
+        "pricing": { "linear": { "base": 60, "word": 12 } }
+      }
+    },
+    "0000000000000000000000000000000000000003": {
+      "balance": "1",
+      "builtin": {
+        "name": "ripemd160",
+        "pricing": { "linear": { "base": 600, "word": 120 } }
+      }
+    },
+    "0000000000000000000000000000000000000004": {
+      "balance": "1",
+      "builtin": {
+        "name": "identity",
+        "pricing": { "linear": { "base": 15, "word": 3 } }
+      }
+    },
+    "0000000000000000000000000000000000000005": {
+      "balance": "1",
+      "builtin": {
+        "name": "modexp",
+        "activate_at": 0,
+        "pricing": { "modexp": { "divisor": 20 } }
+      }
+    },
+    "0000000000000000000000000000000000000006": {
+      "balance": "1",
+      "builtin": {
+        "name": "alt_bn128_add",
+        "pricing": {
+          "0x0": { "price": { "alt_bn128_const_operations": { "price": 150 } } }
+        }
+      }
+    },
+    "0000000000000000000000000000000000000007": {
+      "balance": "1",
+      "builtin": {
+        "name": "alt_bn128_mul",
+        "pricing": {
+          "0x0": {
+            "price": { "alt_bn128_const_operations": { "price": 6000 } }
+          }
+        }
+      }
+    },
+    "0000000000000000000000000000000000000008": {
+      "balance": "1",
+      "builtin": {
+        "name": "alt_bn128_pairing",
+        "pricing": {
+          "0x0": {
+            "price": { "alt_bn128_pairing": { "base": 45000, "pair": 34000 } }
+          }
+        }
+      }
+    },
+    "0000000000000000000000000000000000000009": {
+      "builtin": {
+        "name": "blake2_f",
+        "activate_at": 0,
+        "pricing": { "blake2_f": { "gas_per_round": 1 } }
+      }
+    },
+    "0x913da4198e6be1d5f5e4a40d0667f70c0b5430eb": {
+      "balance": "0x152d02c7e14af6800000"
+    },
+    "0xfc2077ca7f403cbeca41b1b0f62d91b5ea631b5e": {
+      "balance": "0x152d02c7e14af6800000"
+    },
+    "0xd1a7451beb6fe0326b4b78e3909310880b781d66": {
+      "balance": "0x152d02c7e14af6800000"
+    },
+    "0x578270b5e5b53336bac354756b763b309eca90ef": {
+      "balance": "0x152d02c7e14af6800000"
+    },
+    "0x909f59835a5a120eafe1c60742485b7ff0e305da": {
+      "balance": "0x152d02c7e14af6800000"
+    },
+    "0x5711cED5ce6d91Ec7af3e5b02dDB47f409d42818": {
+      "balance": "0x152d02c7e14af6800000"
+    },
+    "0x02db23843DB65077E19757Af077648F106ae9243": {
+      "balance": "0x152d02c7e14af6800000"
+    },
+    "0x543289B0965Eba079b277B344DD1C0C2ab47a4bA": {
+      "balance": "0x152d02c7e14af6800000"
+    },
+    "0x1de55545a139b3BEc88301C87BA241323B0E5ae1": {
+      "balance": "0x152d02c7e14af6800000"
+    },
+    "0xd59feDEbbA13B004677004b79Dec7b60E4913AAc": {
+      "balance": "0x152d02c7e14af6800000"
+    },
+    "0xc4c28C29561ff3d3eB34bcd68A41fce70F8D19B6": {
+      "balance": "0x152d02c7e14af6800000"
+    }
+  }
+}
